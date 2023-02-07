@@ -1,0 +1,14 @@
+:root {
+  --yellow: #f6b93b;
+
+  --gap: 10px;
+  --margin: 30px;
+  --padding: 20px;
+  --section-margin: 50px;
+
+  --font-size-lg: 2rem;
+  --font-size-md: 1.5rem;
+  --font-size-sm: 1rem;
+
+  --font-size-icon: 2.3rem;
+}

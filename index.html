@@ -12,35 +12,121 @@
     />
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="이름을 입력해 주세요"
-        style="font-size: 13pt"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input
-        required
-        type="text"
-        placeholder="오늘은 무슨 일을 하실 건가요?"
-        style="font-size: 13pt"
-      />
-    </form>
-    <ul id="todo-list"></ul>
+    <section class="main-container">
+      <section class="left-contents">
+        <header class="left-contents__header">
+          <div class="logo">
+            <span><i class="fa-brands fa-github"></i>Momentum</span>
+            <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+          </div>
+        </header>
+        <article class="weather">
+          <h1>오늘의 날씨</h1>
+          <div class="weather__today">
+            <div class="weather__today-summary">
+              <div class="weather__today__main">
+                <span class="weather__today__main__icon"
+                  ><i class="fa-regular fa-circle-question"></i
+                ></span>
+                <div class="weather__today__main__text">
+                  <span class="weather__today__main__text__title">Unknown</span>
+                  <span class="weather__today__main__text__city">Unknown</span>
+                </div>
+              </div>
+              <div class="weather__today__other">
+                <span class="weather__today__other__humidity">NaN</span>
+                <span class="weather__today__other__wind">NaN</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="weather">
+          <h1>이번주 날씨</h1>
+          <div class="weather__daily">
+            <div class="weather__daily-summary">
+              <div class="weather__daily-summary0">
+                <div class="weather__daily__main">
+                  <span class="weather__daily__main__icon"
+                    ><i class="fa-regular fa-circle-question"></i
+                  ></span>
+                  <span class="weather__daily__main__day"></span>
+                </div>
+                <div class="weather__daily__other">
+                  <span class="weather__daily__other__temp-max">NaN</span>
+                  <span class="weather__daily__other__temp-min">NaN</span>
+                </div>
+              </div>
+              <div class="weather__daily-summary1">
+                <div class="weather__daily__main">
+                  <span class="weather__daily__main__icon"
+                    ><i class="fa-regular fa-circle-question"></i
+                  ></span>
+                  <span class="weather__daily__main__day"></span>
+                </div>
+                <div class="weather__daily__other">
+                  <span class="weather__daily__other__temp-max">NaN</span>
+                  <span class="weather__daily__other__temp-min">NaN</span>
+                </div>
+              </div>
+              <div class="weather__daily-summary2">
+                <div class="weather__daily__main">
+                  <span class="weather__daily__main__icon"
+                    ><i class="fa-regular fa-circle-question"></i
+                  ></span>
+                  <span class="weather__daily__main__day"></span>
+                </div>
+                <div class="weather__daily__other">
+                  <span class="weather__daily__other__temp-max">NaN</span>
+                  <span class="weather__daily__other__temp-min">NaN</span>
+                </div>
+              </div>
+              <div class="weather__daily-summary3">
+                <div class="weather__daily__main">
+                  <span class="weather__daily__main__icon"
+                    ><i class="fa-regular fa-circle-question"></i
+                  ></span>
+                  <span class="weather__daily__main__day"></span>
+                </div>
+                <div class="weather__daily__other">
+                  <span class="weather__daily__other__temp-max">NaN</span>
+                  <span class="weather__daily__other__temp-min">NaN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="center-contents">
+        <article class="todo">
+          <h1>To Do List</h1>
+          <div class="todos">
+            <form id="todo-form">
+              <input required type="text" />
+            </form>
+            <ul id="todo-list"></ul>
+          </div>
+        </article>
+      </section>
+      <section class="right-contents">
+        <h1 id="greeting" class="hidden"></h1>
+        <h2 id="clock">00:00:00</h2>
+      </section>
+    </section>
+
+    <article class="login-container">
+      <div class="login">
+        <h1>안녕하세요! 이름을 입력해 주세요</h1>
+        <form id="login-form" class="hidden">
+          <input required maxlength="15" type="text" />
+        </form>
+      </div>
+    </article>
+
     <div id="quote">
       <span></span>
       <span></span>
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
@@ -49,4 +135,8 @@
     <script src="js/weather.js"></script>
   </body>
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+  <script
+    src="https://kit.fontawesome.com/5b7b6658b7.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

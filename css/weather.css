@@ -1,0 +1,71 @@
+.weather {
+  margin-top: var(--section-margin);
+}
+
+.weather h1 {
+  font-size: 24px;
+}
+
+.weather__today,
+.weather__daily {
+  margin-top: var(--padding);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--margin);
+  background-color: #fff;
+}
+
+.weather__today__main {
+  display: flex;
+  justify-content: center;
+}
+
+.weather__today__main__icon {
+  font-size: var(--font-size-icon);
+}
+
+.weather__today__main__text {
+  margin-left: var(--margin);
+  display: flex;
+  flex-direction: column;
+}
+
+.weather__today__main__text span:first-child {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.weather__today__main__text span:last-child {
+  color: #888;
+  margin-left: var(--gap);
+}
+
+.weather__today__other {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.weather__today__other__humidity,
+.weather__daily__main__icon {
+  margin-right: var(--gap);
+}
+
+.weather__today__other__humidity span {
+  margin: 0 var(--gap);
+}
+
+.weather__today__other__wind span {
+  margin-left: var(--gap);
+}
+
+.weather__daily-summary > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--gap);
+}
+
+.weather__daily-summary > div:last-child {
+  margin-bottom: 0;
+}
