@@ -60,16 +60,21 @@
 #todo-list {
   overflow-y: scroll;
   height: 55vh;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 #todo-list::-webkit-scrollbar {
-  display: none;
+  width: 6px;
+  background-color: inherit;
+}
+
+#todo-list::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 10px;
 }
 
 #todo-list > li {
   height: 10vh;
+  margin-right: var(--gap);
   margin-bottom: var(--gap);
   border-radius: 30px;
   display: flex;
@@ -81,14 +86,4 @@
 
 .remove-todo {
   animation: opacity 0.5s;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
