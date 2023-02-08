@@ -1,4 +1,17 @@
 #clock {
   font-size: 50px;
-  margin-top: var(--margin);
+}
+
+#clock-date {
+  margin-left: var(--gap);
+  color: #888;
+  font-weight: 500;
+}
+.clocks {
+  margin-top: var(--padding);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--margin);
+  background-color: var(--gray);
 }

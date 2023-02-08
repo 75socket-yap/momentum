@@ -42,10 +42,15 @@ const quotes = [
   },
 ];
 
+const quoteImages = document.querySelector("#quote");
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
-
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
+const images = ["0.jpg", "1.jpg", "2.jpg"];
+const chosenImage = images[Math.floor(Math.random() * images.length)];
+
+quoteImages.style.backgroundImage = `url(img/${chosenImage})`;
+quoteImages.style.opacity = `0.85`;
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;

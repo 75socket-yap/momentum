@@ -1,4 +1,5 @@
 const clock = document.querySelector("h2#clock");
+const clockDate = document.querySelector("h4#clock-date");
 
 function getClock() {
   const date = new Date();
@@ -6,7 +7,7 @@ function getClock() {
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const Seconds = String(date.getSeconds()).padStart(2, "0");
   clock.innerText = `${hours}:${minutes}:${Seconds}`;
-  // clock.innerText = `${hours}:${minutes}`;
+  clockDate.innerText = date.toDateString();
 }
 
 getClock();
