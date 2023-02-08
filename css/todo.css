@@ -87,3 +87,13 @@
 .remove-todo {
   animation: opacity 0.5s;
 }
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
