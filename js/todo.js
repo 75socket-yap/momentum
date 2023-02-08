@@ -10,8 +10,16 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
-function deleteToDo(event) {
+function delay(milliseconds) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, milliseconds);
+  });
+}
+
+async function deleteToDo(event) {
   const li = event.target.parentElement;
+  li.classList.add("remove-todo");
+  await delay(500);
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();
@@ -23,10 +31,10 @@ function paintToDo(newToDo) {
   const span = document.createElement("span");
   span.innerText = newToDo.text;
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerText = "✕";
   button.addEventListener("click", deleteToDo);
-  li.appendChild(button);
   li.appendChild(span);
+  li.appendChild(button);
   toDoList.appendChild(li);
 }
 

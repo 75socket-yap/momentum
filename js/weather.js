@@ -49,16 +49,16 @@ function onGeoSuccess(position) {
         const tempMax = document.querySelector(
           `.weather__daily-summary${i} .weather__daily__other__temp-max`
         );
-        const tempMin = document.querySelector(
-          `.weather__daily-summary${i} .weather__daily__other__temp-min`
+        const humidity = document.querySelector(
+          `.weather__daily-summary${i} .weather__daily__other__humidity`
         );
         if (weatherDailyIcon) {
           const icon = data.list[i * 8].weather[0].icon.substr(0, 2);
           const day = new Date(data.list[i * 8].dt * 1000).getDay();
           weatherDailyIcon.innerHTML = `<i class="${weatherIconList[icon]}"></i>`;
           dailyWeek.innerText = `${week[day]}`;
-          tempMax.innerText = `${Math.floor(data.list[i * 8].main.temp_min)}°C`;
-          tempMin.innerText = `${Math.floor(data.list[i * 8].main.temp_min)}°C`;
+          tempMax.innerText = `${Math.floor(data.list[i * 8].main.temp_max)}°C`;
+          humidity.innerText = `${Math.floor(data.list[i * 8].main.humidity)}%`;
         }
       }
     });
