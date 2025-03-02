@@ -1,5 +1,5 @@
 # To Do List 프로젝트
-https://oz528.github.io/momentum/
+https://75socket-yap.github.io/momentum/
 
 오늘의 할 일 리스트, 현재 내 위치의 간단한 정보들을 받아와서 표시해주는 프로젝트입니다.
 
